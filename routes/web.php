@@ -1,0 +1,30 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AdminController;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('Homepage/homepage',[HomepageController::class,'index']);
+Route::get('Homepage/menu',[HomepageController::class,'menu']);
+
+Route::get('Login/login',[LoginController::class,'login']);
+
+Route::get('Admin/admin',[AdminController::class,'admin'])->middleware('isLoggedIn');
+
+Route::post('Admin/CheckLogin',[AdminController::class,'checkLogin'])->name('CheckLogin969');
+Route::get('Admin/Logout',[AdminController::class,'Logout'])->name('Logout969');
