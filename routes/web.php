@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +20,13 @@ use App\Http\Controllers\AdminController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('Homepage/homepage',[HomepageController::class,'index']);
 Route::get('Homepage/menu',[HomepageController::class,'menu']);
 
 Route::get('Login/login',[LoginController::class,'login']);
+
+Route::get('/Register/register',[RegisterController::class,'register']); 
 
 Route::get('Admin/admin',[AdminController::class,'admin'])->middleware('isLoggedIn');
 

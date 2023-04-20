@@ -35,6 +35,7 @@ class AdminController extends Controller
     public function Logout(){
         if(Session::has('AdminID')){
             Session::pull('AdminID');
+            return redirect('Homepage/homepage');
         }
     }
 }
