@@ -255,64 +255,56 @@
                         <div class="col-lg-5 col-md-6 align-self-center py-5">
                             <h2 class="special-number">01.</h2>
                             <div class="dishes-text">
-                                <h3><span>Beef</span><br> Steak Sauce</h3>
-                                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate,
-                                    ea vero alias perferendis quas animi doloribus voluptates. Atque explicabo ea
-                                    nesciunt provident libero qui eum, corporis esse quos excepturi soluta?</p>
-                                <h3 class="special-dishes-price">$15.00</h3>
-                                <a href="#" class="btn-primary mt-3">book a table</a>
+                                <h3><span>Rice</span><br> Yang Chow Fried Rice</h3>
+                                <p class="pt-3">Yang Chow Fried Rice with diverse colors, each grain of golden rice is soaked with sweet and salty spices, fresh and natural vegetables mixed with sausages and sausages with a characteristic flavor, the more you eat, the more passionate you are.</p>
+                                <h3 class="special-dishes-price">$10.00</h3>
+                                <a href="#" class="btn-primary mt-3">buy</a>
                             </div>
                         </div>
                         <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                            <img src="img/steak.jpg" alt="" class="img-fluid shadow w-100">
+                            <img src="../../public/Product_Image/MC003.jpg" alt="" class="img-fluid shadow w-100">
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                            <img src="img/salmon-zucchini.jpg" alt="" class="img-fluid shadow w-100">
+                            <img src="../../public/Product_Image/MC008.jpg" alt="" class="img-fluid shadow w-100">
                         </div>
                         <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2 py-5">
                             <h2 class="special-number">02.</h2>
                             <div class="dishes-text">
-                                <h3><span>Salmon</span><br> Zucchini</h3>
-                                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis,
-                                    accusamus culpa quam amet ipsam odit ea doloremque accusantium quo, itaque possimus
-                                    eius. In a quis quibusdam omnis atque vero dolores!</p>
-                                <h3 class="special-dishes-price">$12.00</h3>
-                                <a href="#" class="btn-primary mt-3">book a table <span><i
+                                <h3><span>Noodle</span><br> Noodle with Duck</h3>
+                                <p class="pt-3">Chinese-style noodles should be both fragrant and smooth, bringing a bit of toughness to the dish. The fried duck here is crispy, while the tender duck is for those who want to enjoy the sweetness in every fiber of the meat</p>
+                                <h3 class="special-dishes-price">$25.00</h3>
+                                <a href="#" class="btn-primary mt-3">buy <span><i
                                             class="fa fa-long-arrow-right"></i></span></a>
                             </div>
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-lg-5 col-md-6 align-self-center py-5">
-                            <h2 class="special-number">01.</h2>
+                            <h2 class="special-number">03.</h2>
                             <div class="dishes-text">
-                                <h3><span>Beef</span><br> Steak Sauce</h3>
-                                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate,
-                                    ea vero alias perferendis quas animi doloribus voluptates. Atque explicabo ea
-                                    nesciunt provident libero qui eum, corporis esse quos excepturi soluta?</p>
-                                <h3 class="special-dishes-price">$15.00</h3>
-                                <a href="#" class="btn-primary mt-3">book a table</a>
+                                <h3><span>Dessert</span><br> Waffle </h3>
+                                <p class="pt-3">In terms of appearance, the Belgian Waffle impresses with its light and crispy texture and distinctive diagonal lines</p>
+                                <h3 class="special-dishes-price">$9.00</h3>
+                                <a href="#" class="btn-primary mt-3">buy</a>
                             </div>
                         </div>
                         <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                            <img src="img/steak.jpg" alt="" class="img-fluid shadow w-100">
+                            <img src="../../public/Product_Image/DS001.jpg" alt="" class="img-fluid shadow w-100">
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                            <img src="img/salmon-zucchini.jpg" alt="" class="img-fluid shadow w-100">
+                            <img src="../../public/Product_Image/CK02.jpg" alt="" class="img-fluid shadow w-100">
                         </div>
                         <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2 py-5">
-                            <h2 class="special-number">02.</h2>
+                            <h2 class="special-number">04.</h2>
                             <div class="dishes-text">
-                                <h3><span>Salmon</span><br> Zucchini</h3>
-                                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis,
-                                    accusamus culpa quam amet ipsam odit ea doloremque accusantium quo, itaque possimus
-                                    eius. In a quis quibusdam omnis atque vero dolores!</p>
-                                <h3 class="special-dishes-price">$12.00</h3>
-                                <a href="#" class="btn-primary mt-3">book a table <span><i
+                                <h3><span>Cocktail</span><br> Margarita</h3>
+                                <p class="pt-3">Updating...</p>
+                                <h3 class="special-dishes-price">$45.00</h3>
+                                <a href="#" class="btn-primary mt-3">buy <span><i
                                             class="fa fa-long-arrow-right"></i></span></a>
                             </div>
                         </div>

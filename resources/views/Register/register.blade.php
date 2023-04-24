@@ -21,14 +21,24 @@
 <div id="container_2">
   
   <form id="survey-form">
-    <label id="name-label">Name</label>
+    <label id="name-label">Customer ID</label>
+      <input type="text" id="name" name="name" class="form" required placeholder="Insert your ID"><br>
+      <label id="name-label">Password</label>
+      <input type="text" id="name" name="name" class="form" required placeholder="Insert your password"><br>
+    <label id="name-label">Full Name</label>
       <input type="text" id="name" name="name" class="form" required placeholder="Insert your name"><br><!--name--->
-    <label id="email-label">Email</label>
+    <label id="email-label">Picture</label>
       <input type="email" id="email" name="email" class="form" required placeholder="Insert your email"><br><!---email-->
-    <label id="number-label">Age</label>
+    <label id="number-label">Date of Birth</label>
       <input type="number" id="number" name="number" class="form" placeholder="Age" min=18 max=60 required><br><!---number-->
-    <label id="carrer">Carrer</label>
-    <select id="dropdown" name="role" required>
+    <label id="name-label">Gender</label>
+      <input type="text" id="name" name="name" class="form" required placeholder="Insert your gender"><br>
+    <label id="name-label">Email</label>
+      <input type="text" id="name" name="name" class="form" required placeholder="Insert your email"><br>
+    <label id="name-label">Address</label>
+      <input type="text" id="name" name="name" class="form" required placeholder="Insert your address"><br>
+    <label id="name-label">Phone number</label>
+      <input type="text" id="name" name="name" class="form" required placeholder="Insert your phone number"><br>
       <option disabled selected value>
         Select your carrer
       </option>

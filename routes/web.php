@@ -29,6 +29,9 @@ Route::get('Login/login',[LoginController::class,'login']);
 Route::get('/Register/register',[RegisterController::class,'register']); 
 
 Route::get('Admin/admin',[AdminController::class,'admin'])->middleware('isLoggedIn');
+Route::get('Admin/pages/tables',[AdminController::class,'FoodProduct']);
+Route::get('Admin/pages/edit/{id}', [AdminController::class, 'edit']);
+Route::get('Admin/pages/profile/{id}', [AdminController::class, 'profileAdmin']);
 
 Route::post('Admin/CheckLogin',[AdminController::class,'checkLogin'])->name('CheckLogin969');
 Route::get('Admin/Logout',[AdminController::class,'Logout'])->name('Logout969');
