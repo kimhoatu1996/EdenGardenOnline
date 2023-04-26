@@ -289,7 +289,7 @@
                             <div class="table-responsive p-0">
                                 <table class="table align-items-center mb-0">
                                     <thead>
-                                        <tr>                
+                                        <tr>
                                             <th
                                                 class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                 FOOD</th>
@@ -305,7 +305,7 @@
                                                 PRICE</th>
                                             <th
                                                 class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                ACTION</th>
+                                                OPTION</th>
                                             <th class="text-secondary opacity-7"></th>
                                         </tr>
                                     </thead>
@@ -333,14 +333,16 @@
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
                                                     <p class="text-center">{{ $item->Price }}</p>
-                                                </td>                                                
+                                                </td>
                                                 <td class="align-middle">
                                                 <td>
                                                     <a href="{{ url('delete/' . $item->FoodID) }}"
                                                         class="btn btn-primary"
                                                         onclick="return confirm('Are you sure about this?')">Delete</a>
                                                     <a href="{{ url('Admin/pages/edit/' . $item->SizeOfFoodID) }}"
-                                                        class="btn btn-primary">Update</a>
+                                                        class="btn btn-primary">Edit Price</a>
+                                                    <a href="{{ url('Admin/pages/edit/' . $item->SizeOfFoodID) }}"
+                                                        class="btn btn-primary">Edit Detail</a>
                                                 </td>
                                                 </td>
                                             </tr>

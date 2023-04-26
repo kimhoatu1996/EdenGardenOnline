@@ -49,8 +49,8 @@ class AdminController extends Controller
 
     public function FoodProduct()
     {
-        $data = FooD::select('SizeOfFood.Size', 'SizeOfFood.Price', 'Food.FoodID', 'Food.FoodName', 'Food.FoodDetails', 'Food.FoodPicture', 'kinds_of_food.KindsOfFoodName','SizeOfFood.SizeOfFoodID')
-            ->join('SizeOfFood', 'SizeOfFood.FoodID', '=', 'Food.FoodID')
+        $data = FooD::select('size_of_food.Size', 'size_of_food.Price', 'Food.FoodID', 'Food.FoodName', 'Food.FoodDetails', 'Food.FoodPicture', 'kinds_of_food.KindsOfFoodName','size_of_food.SizeOfFoodID')
+            ->join('size_of_food', 'size_of_food.FoodID', '=', 'Food.FoodID')
             ->join('kinds_of_food', 'Food.KindsOfFoodID', '=', 'kinds_of_food.KindsOfFoodID')
             ->get();
         return view('Admin.pages.tables', compact('data'));
@@ -59,15 +59,30 @@ class AdminController extends Controller
     public function edit($id)
     {
         $data = FooD::select('*')
-        ->join('SizeOfFood', 'SizeOfFood.FoodID', '=', 'Food.FoodID')
+        ->join('size_of_food', 'size_of_food.FoodID', '=', 'Food.FoodID')
         ->where('SizeOfFoodID', '=', $id)->first();
         $kinds_of_food = KindsOfFood::get();
         return view('Admin.pages.edit', compact('data', 'kinds_of_food'));
+    }
+
+    public function update(Request $request)
+    {
+        SizeOfFood::where('SizeOfFoodID', '=', $request->sizeid)->update([
+            'Price' => $request->price
+        ]);
+        return redirect('Admin/pages/tables');
     }
 
     public function profileAdmin($id){
         $information = Admin::get()
         ->where('AdminID','=',$id)->first();
         return view('Admin.pages.profile', compact('information'));
+    }
+
+    public function updateProfileAdmin(Request $request){
+        Admin::where('AdminID','=',$request->id)->update([
+            'AdminFullName' => $request->fullname
+        ]);
+        return redirect('Admin/admin');
     }
 }
