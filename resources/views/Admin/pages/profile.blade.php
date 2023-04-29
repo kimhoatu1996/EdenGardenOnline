@@ -388,8 +388,16 @@
                                         <div class="form-group">
                                             <label for="example-text-input" class="form-control-label">Email
                                                 address</label>
-                                            <input class="form-control" type="email"
+                                            <input class="form-control" type="email" name="email"
                                                 value="{{ $information->Email }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="example-text-input" class="form-control-label">
+                                                Phone Number</label>
+                                            <input class="form-control" type="text" name="phone"
+                                                value="{{ $information->PhoneNumber }}">
                                         </div>
                                     </div>
                                 </div>

@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
     <title>
-        Argon Dashboard 2 by Creative Tim
+        EDIT PRICE
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -53,19 +53,19 @@
             <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
                 target="_blank">
                 <img src="../../assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
-                <span class="ms-1 font-weight-bold">Argon Dashboard 2</span>
+                <span class="ms-1 font-weight-bold">ADMIN</span>
             </a>
         </div>
         <hr class="horizontal dark mt-0">
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/dashboard.html">
+                    <a class="nav-link " href="{{url('Admin/admin')}}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Dashboard</span>
+                        <span class="nav-link-text ms-1">HOMIE</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -295,7 +295,7 @@
                                         <div class="mb-3">
                                             <label for="name">Food Name:</label>
                                             <input type="text" class="form-control" id="name" name="name"
-                                                value="{{ $data->FoodName }}">
+                                                value="{{ $data->FoodName }}" readonly>
                                         </div>
                                         <div class="mb-3">
                                             <label for="name">Size:</label>
@@ -304,28 +304,26 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="name">Price:</label>
+                                            @error('price')
+                                                <p style="color: yellow; font-weight: bold;">
+                                                    <mark><em>{{ $message }}</em></mark>
+                                                </p>
+                                            @enderror
                                             <input type="number" class="form-control" id="price" name="price"
                                                 value="{{ $data->Price }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="name">Food Picture:</label>
+                                            <div>
+                                                <img src="{{url('/Product_Image/'.$data->FoodPicture)}}">
+                                                </div>
                                             <input type="file" class="form-control" id="image" name="image"
-                                                value="{{ $data->FoodPicture }}">
+                                                value="{{ $data->FoodPicture }}" readonly>
                                         </div>
                                         <div class="mb-3">
                                             <label for="details">Food Details:</label>
-                                            <textarea class="form-control" rows="5" id="details" name="details" placeholder="{{ $data->FoodDetails }}">
+                                            <textarea class="form-control" rows="5" id="details" name="details" placeholder="{{ $data->FoodDetails }}" readonly>
                                         </textarea>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="category">Kind of Food Name:</label>
-                                            <select name="category" id="category" class="form-control">
-                                                @foreach ($kinds_of_food as $name)
-                                                    <option
-                                                        value="{{ $name->KindsOfFoodID }}"{{ $name->KindsOfFoodID == $data->KindsOfFoodID ? 'selected' : '' }}>
-                                                        {{ $name->KindsOfFoodName }}</option>
-                                                @endforeach
-                                            </select>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Update</button>
                                     </form>

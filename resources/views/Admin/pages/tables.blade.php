@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <title>
-        Argon Dashboard 2 by Creative Tim
+        ADMIN EDEN GARDEN
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -46,23 +46,23 @@
             <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
                 target="_blank">
                 <img src="../assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
-                <span class="ms-1 font-weight-bold">Argon Dashboard 2</span>
+                <span class="ms-1 font-weight-bold">ADMIN</span>
             </a>
         </div>
         <hr class="horizontal dark mt-0">
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/dashboard.html">
+                    <a class="nav-link" href="{{ url('Admin/admin') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Dashboard</span>
+                        <span class="nav-link-text ms-1">HOMIE</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="../pages/tables.html">
+                    <a class="nav-link active" href="{{ url('Admin/pages/tables') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
@@ -71,7 +71,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/billing.html">
+                    <a class="nav-link " href="#">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
@@ -80,21 +80,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/virtual-reality.html">
+                    <a class="nav-link " href="{{ url('Admin/pages/addproduct') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-app text-info text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Virtual Reality</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="../pages/rtl.html">
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">RTL</span>
+                        <span class="nav-link-text ms-1">Add Product</span>
                     </a>
                 </li>
                 <li class="nav-item mt-3">
@@ -110,21 +101,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/sign-in.html">
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Sign In</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="../pages/sign-up.html">
+                    <a class="nav-link " href="{{ route('Logout969') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-collection text-info text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Sign Up</span>
+                        <span class="nav-link-text ms-1">Sign Out</span>
                     </a>
                 </li>
             </ul>
@@ -161,20 +143,17 @@
                     <h6 class="font-weight-bolder text-white mb-0">Tables</h6>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-                    <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                    <form action="{{ url('Admin/pages/tables') }}" method="GET" class="search-form"
+                        style="position: fixed; top: 10px; right: 10px;">
                         <div class="input-group">
-                            <span class="input-group-text text-body"><i class="fas fa-search"
-                                    aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" placeholder="Type here...">
+                            <input type="text" class="form-control" name="search"
+                                value="{{ isset($search) ? $search : '' }}" placeholder="Search...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Go</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                     <ul class="navbar-nav  justify-content-end">
-                        <li class="nav-item d-flex align-items-center">
-                            <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
-                                <i class="fa fa-user me-sm-1"></i>
-                                <span class="d-sm-inline d-none">Sign In</span>
-                            </a>
-                        </li>
                         <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
                                 <div class="sidenav-toggler-inner">
@@ -341,7 +320,7 @@
                                                         onclick="return confirm('Are you sure about this?')">Delete</a>
                                                     <a href="{{ url('Admin/pages/edit/' . $item->SizeOfFoodID) }}"
                                                         class="btn btn-primary">Edit Price</a>
-                                                    <a href="{{ url('Admin/pages/edit/' . $item->SizeOfFoodID) }}"
+                                                    <a href="{{ url('Admin/pages/editdetails/' . $item->FoodID) }}"
                                                         class="btn btn-primary">Edit Detail</a>
                                                 </td>
                                                 </td>
@@ -349,6 +328,36 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <ul class="pagination">
+                                    @if ($data->onFirstPage())
+                                        <li class="page-item disabled"><a class="page-link">&laquo;</a></li>
+                                    @else
+                                        <li class="page-item"><a class="page-link"
+                                                href="{{ $data->previousPageUrl() }}">&laquo;</a></li>
+                                    @endif
+                                    @foreach ($data->getUrlRange(max(1, $data->currentPage() - 2), min($data->lastPage(), $data->currentPage() + 2)) as $page => $url)
+                                        @if ($page == $data->currentPage())
+                                            <li class="page-item active"><span
+                                                    class="page-link">{{ $page }}</span></li>
+                                        @else
+                                            <li class="page-item"><a class="page-link"
+                                                    href="{{ $url }}">{{ $page }}</a></li>
+                                        @endif
+                                    @endforeach
+
+                                    @if ($data->currentPage() > 3)
+                                        <li class="page-item disabled"><a class="page-link">...</a></li>
+                                    @endif
+
+                                    @if ($data->hasMorePages())
+                                        <li class="page-item"><a class="page-link"
+                                                href="{{ $data->nextPageUrl() }}">&raquo;</a></li>
+                                    @else
+                                        <li class="page-item disabled"><a class="page-link">&raquo;</a></li>
+                                    @endif
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -768,6 +777,40 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+
+    <style>
+        .search-form {
+            background-color: #ff69b4;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .search-form input {
+            background-color: #ff69b4;
+            color: #fff;
+            border: 0;
+            border-radius: 30px;
+            font-size: 16px;
+        }
+
+        .search-form button {
+            background-color: #fff;
+            color: #ff69b4;
+            border: 0;
+            border-radius: 30px;
+            font-size: 16px;
+            margin-left: -10px;
+        }
+
+        .search-form input:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+    </style>
 </body>
 
 </html>

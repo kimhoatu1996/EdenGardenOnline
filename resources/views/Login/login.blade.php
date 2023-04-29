@@ -53,7 +53,7 @@
 <!-- partial -->
 <script>
   function goBack() {
-    window.location.href = "{{ URL::to('Homepage/homepage') }}";
+    window.location.href = "{{ URL::to('Customer/customer') }}";
   }
   </script>
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
