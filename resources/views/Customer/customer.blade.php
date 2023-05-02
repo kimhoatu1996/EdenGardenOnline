@@ -92,7 +92,7 @@
                         </li>
                         <div class="d-flex flex-lg-row flex-column">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Customer FullName<span
+                                <a class="nav-link" href="#">{{Session::get('CustomerFullName')}}<span
                                         class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown">
@@ -106,6 +106,10 @@
                                     @endforeach
                                 </div>
                             </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Order<span
+                                        class="sr-only">(current)</span></a>
+                            </li>
                         </div>
                     </ul>
                     <a class="navbar-brand navbar-brand-center d-flex align-items-center only-desktop" href="#">
@@ -115,6 +119,9 @@
                         <div class="d-flex flex-lg-row flex-column">
                             <li class="nav-item active">
                                 <a class="nav-link" href="{{ url('Customer/customerprofile/' . Session::get('CustomerID')) }}">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url('Customer/customerorder')}}">Order</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('customer.logout') }}">Logout</a>

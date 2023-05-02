@@ -38,9 +38,30 @@
                     <h2 class="title">Register Infomation</h2>
                     <form action="{{ url('Register/register') }}" method="POST">
                         @if (Session::has('fail'))
-                            <div class="alert alert-danger">
-                                {{ Session::get('fail') }};s
+                            <div id="myModal" class="modal fade">
+                                <div class="modal-dialog modal-confirm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Aletr</h4>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-hidden="true">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="text-center" style="color: yellow; font-weight: bold;">
+                                                {{ Session::get('fail') }}</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-danger" style="color: yellow; font-weight: bold;"
+                                                data-dismiss="modal">OK</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <script>
+                                $(document).ready(function() {
+                                    $('#myModal').modal('show');
+                                });
+                            </script>
                         @endif
                         @csrf
                         <div class="input-group">

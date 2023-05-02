@@ -69,7 +69,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="../pages/tables.html">
+                    <a class="nav-link active" href="{{url('Admin/pages/tables')}}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
@@ -78,37 +78,28 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/billing.html">
+                    <a class="nav-link " href="{{url('Admin/accountcustomer')}}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Billing</span>
+                        <span class="nav-link-text ms-1">Account Customer</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/virtual-reality.html">
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-app text-info text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Virtual Reality</span>
+                    <a class="nav-link " href="{{url('Admin/pages/addproduct')}}">
+                      <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-app text-info text-sm opacity-10"></i>
+                      </div>
+                      <span class="nav-link-text ms-1">Add Product</span>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="../pages/rtl.html">
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">RTL</span>
-                    </a>
-                </li>
+                  </li>
+               
                 <li class="nav-item mt-3">
                     <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/profile.html">
+                    <a class="nav-link " href="{{ url('Admin/pages/profile/' . Session::get('AdminID')) }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
@@ -117,23 +108,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="../pages/sign-in.html">
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Sign In</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="../pages/sign-up.html">
+                    <a class="nav-link " href="{{route ('Logout969')}}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-collection text-info text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Sign Up</span>
+                        <span class="nav-link-text ms-1">Sign Out</span>
                     </a>
                 </li>
+               
             </ul>
         </div>
     </aside>
@@ -279,7 +262,7 @@
                         <div class="card-body px-0 pt-0 pb-2">
                             <div class="table-responsive p-0">
                                 <div class="container mt-3">
-                                    <h2 style="align-content: center">Edit product</h2>
+                                    <h2 style="text-align: center">Edit Details</h2>
                                     @if (Session::has('success'))
                                         <div class="alert alert-success" role="alert">
                                             {{ Session::get('success') }}
@@ -289,9 +272,6 @@
                                         @csrf
                                         <input type="hidden" name="sizeid" value="{{ $data->SizeOfFoodID }}"
                                             readonly>
-                                        <div class="mb-3 mt-3">
-                                            <img src="../../../public/Product_Image/{{url($data->FoodPicture)}}" alt="">
-                                        </div>
                                         <div class="mb-3 mt-3" style="font-size: 50px">
                                             <label for="id">Food ID:</label>
                                             <input type="text" class="form-control" id="id" name="id"
@@ -309,10 +289,15 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="name">Food Picture:</label>
+                                            @error('image')
+                                                <p style="color: yellow; font-weight: bold;">
+                                                    <mark><em>{{ $message }}</em></mark>
+                                                </p>
+                                            @enderror
                                             <div>
                                             <img src="{{url('/Product_Image/'.$data->FoodPicture)}}" width="200" height="200">
                                             </div>
-                                            <input type="file" class="form-control" id="image" name="image" value="{{ $data->FoodPicture }}">
+                                            <input type="file" class="form-control" id="image" name="image">
                                         </div>
                                         <div class="mb-3">
                                             <label for="details">Food Details:</label>

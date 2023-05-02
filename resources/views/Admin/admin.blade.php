@@ -65,19 +65,36 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="{{url('Admin/pages/tables')}}">
+          <a class="nav-link " href="{{url('Admin/accountcustomer')}}">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Billing</span>
+            <span class="nav-link-text ms-1">Account Customer</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{{url('Admin/employee')}}">
+              <div
+                  class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+              </div>
+              <span class="nav-link-text ms-1">Manage Employee</span>
+          </a>
+      </li>
         <li class="nav-item">
           <a class="nav-link " href="{{url('Admin/pages/addproduct')}}">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-app text-info text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Add Product</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{{url('Admin/pages/addemployee')}}">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-app text-info text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Add Employee</span>
           </a>
         </li>
         <li class="nav-item mt-3">

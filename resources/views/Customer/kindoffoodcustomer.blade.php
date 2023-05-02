@@ -9,7 +9,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Resto - Restaurant Bootstrap 4 Template by GetTemplates.co</title>
+    <title>Kinds of Food Eden Garden</title>
     <meta name="description" content="Resto">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -55,7 +55,6 @@
         <a href="javascript:void(0)" id="side-search-close">&times;</a>
         <div class="sidenav-content">
             <form action="">
-
                 <div class="input-group md-form form-sm form-2 pl-0">
                     <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search"
                         aria-label="Search">
@@ -65,11 +64,8 @@
                         </button>
                     </div>
                 </div>
-
             </form>
         </div>
-
-
     </div>
     <div id="canvas-overlay"></div>
     <div class="boxed-page">
@@ -92,7 +88,7 @@
                         </li>
                         <div class="d-flex flex-lg-row flex-column">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Customer FullName<span
+                                <a class="nav-link" href="#">{{ Session::get('CustomerFullName') }}<span
                                         class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown">
@@ -102,9 +98,20 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     @foreach ($kindsoffood as $name)
-                                    <a class="dropdown-item" href="{{ url('Customer/kindoffoodcustomer/' . $name->KindsOfFoodID) }}">{{ $name->KindsOfFoodName }}</a>
+                                        <a class="dropdown-item"
+                                            href="{{ url('Customer/kindoffoodcustomer/' . $name->KindsOfFoodID) }}">{{ $name->KindsOfFoodName }}</a>
                                     @endforeach
                                 </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link "
+                                    href="{{ url('Customer/customerorder/' . '?customerid=' . session('CustomerID')) }}">
+                                    <div
+                                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                        <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+                                    </div>
+                                    <span class="nav-link-text ms-1">Order</span>
+                                </a>
                             </li>
                         </div>
                     </ul>
@@ -114,7 +121,8 @@
                     <ul class="navbar-nav d-flex justify-content-between">
                         <div class="d-flex flex-lg-row flex-column">
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{ url('Customer/customerprofile') }}">Profile</a>
+                                <a class="nav-link"
+                                    href="{{ url('Customer/customerprofile/' . Session::get('CustomerID')) }}">Profile</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('customer.logout') }}">Logout</a>
@@ -328,39 +336,40 @@
                                     Specialties
                                 </span>
                                 <h2>
-                                    {{ $data[0]->KindsOfFoodName}} MENU
+                                    {{ $data[0]->KindsOfFoodName }} MENU
                                 </h2>
                             </div>
                         </div>
                     </div>
                     <!--<div class="menus d-flex align-items-center flex-wrap"> -->
-                        @foreach ($data as $item)
-                            <div class="menus d-flex align-items-center">
-                                <div class="menu-img rounded-circle">
-                                    <img class="img-fluid" src="../../Product_Image/{{ $item->FoodPicture }}"
-                                        alt="">
-                                </div>
-                                <div class="text-wrap">
-                                    <div class="row align-items-start">
-                                        <div class="col-8">
-                                            <h4>{{ $item->FoodName }}</h4>
-                                        </div>
-                                        <div class="col-8">
-                                            <p>{{ $item->Size }}</p>
-                                        </div>
-                                        <div class="col-4">
-                                            <a href="#" class="btn btn-primary">Buy</a>
-                                            <h4 class="text-muted menu-price">{{ $item->Price }}</h4>
-                                        </div>
-                                    </div>
-                                    <p>{{ $item->KindsOfFoodName }}</p>
-                                </div>
+                    @foreach ($data as $item)
+                        <div class="menus d-flex align-items-center">
+                            <div class="menu-img rounded-circle">
+                                <img class="img-fluid" src="../../Product_Image/{{ $item->FoodPicture }}"
+                                    alt="">
                             </div>
-                        @endforeach                    
+                            <div class="text-wrap">
+                                <div class="row align-items-start">
+                                    <div class="col-8">
+                                        <h4>{{ $item->FoodName }}</h4>
+                                    </div>
+                                    <div class="col-8">
+                                        <p>{{ $item->Size }}</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="{{ url('/buy/' . $item->FoodID . '?customerid=' . session('CustomerID')) }}"
+                                            class="btn btn-primary">Buy</a>
+                                        <h4 class="text-muted menu-price">{{ $item->Price }}</h4>
+                                    </div>
+                                </div>
+                                <p>{{ $item->KindsOfFoodName }}</p>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
-        </div>
-        </section>
+    </div>
+    </section>
 
     <!-- <div class="menus d-flex align-items-center">
                                 <div class="menu-img rounded-circle">
@@ -546,10 +555,10 @@
     <!-- End of Testimonial Section-->
     <!-- End of Team Section -->
     <!-- Reservation Section -->
-    
-                               
 
-        </div>
+
+
+    </div>
     </section>
     <!-- End of Reservation Section -->
     <footer class="mastfoot pb-5 bg-white section-padding pb-0">

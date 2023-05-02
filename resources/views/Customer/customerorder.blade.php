@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{ url('Admin/assets/img/apple-icon.png') }}">
     <link rel="icon" type="image/png" href="{{ url('Admin/assets/img/favicon.png') }}">
     <title>
-Profile Customer Page    </title>
+        Customer Order </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Nucleo Icons -->
@@ -49,14 +49,14 @@ Profile Customer Page    </title>
                 target="_blank">
                 <img src="{{ url('Admin/assets/img/logo-ct-dark.png') }}" class="navbar-brand-img h-100"
                     alt="main_logo">
-                <span class="ms-1 font-weight-bold">CUSTOMER</span>
+                <span class="ms-1 font-weight-bold">ORDER</span>
             </a>
         </div>
         <hr class="horizontal dark mt-0">
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link " href="{{url('Customer/customer')}}">
+                    <a class="nav-link " href="{{ url('Customer/customer') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
@@ -70,11 +70,11 @@ Profile Customer Page    </title>
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Cart</span>
+                        <span class="nav-link-text ms-1">Card</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{url('Customer/customerorder')}}">
+                    <a class="nav-link " href="{{ url('Customer/customerorder') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
@@ -82,13 +82,12 @@ Profile Customer Page    </title>
                         <span class="nav-link-text ms-1">Order</span>
                     </a>
                 </li>
-
-
                 <li class="nav-item mt-3">
                     <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="../pages/profile.html">
+                    <a class="nav-link active"
+                        href="{{ url('Customer/customerprofile/' . Session::get('CustomerID')) }} ">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
@@ -96,7 +95,6 @@ Profile Customer Page    </title>
                         <span class="nav-link-text ms-1">Profile</span>
                     </a>
                 </li>
-               
                 <li class="nav-item">
                     <a class="nav-link " href="{{ route('customer.logout') }}">
                         <div
@@ -248,48 +246,18 @@ Profile Customer Page    </title>
                 <div class="row gx-4">
                     <div class="col-auto">
                         <div class="avatar avatar-xl position-relative">
-                            <img src="{{ url('public/Product_Image' . $information->CustomerPicture) }}"
-                                alt="profile_image" class="w-100 border-radius-lg shadow-sm">
+                            <img src="{{ url('public/Product_Image' . Session::get('CustomerPicture')) }} "
+                                class="w-100 border-radius-lg shadow-sm">
                         </div>
                     </div>
                     <div class="col-auto my-auto">
                         <div class="h-100">
                             <h5 class="mb-1">
-                                {{ $information->CustomerFullName }}
+                                {{ Session::get('CustomerFullName') }}
                             </h5>
                             <p class="mb-0 font-weight-bold text-sm">
-                                {{ $information->Email }}
+                                {{ Session::get('Email') }}
                             </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
-                        <div class="nav-wrapper position-relative end-0">
-                            <ul class="nav nav-pills nav-fill p-1" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link mb-0 px-0 py-1 active d-flex align-items-center justify-content-center "
-                                        data-bs-toggle="tab" href="javascript:;" role="tab"
-                                        aria-selected="true">
-                                        <i class="ni ni-app"></i>
-                                        <span class="ms-2">App</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link mb-0 px-0 py-1 d-flex align-items-center justify-content-center "
-                                        data-bs-toggle="tab" href="javascript:;" role="tab"
-                                        aria-selected="false">
-                                        <i class="ni ni-email-83"></i>
-                                        <span class="ms-2">Messages</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link mb-0 px-0 py-1 d-flex align-items-center justify-content-center "
-                                        data-bs-toggle="tab" href="javascript:;" role="tab"
-                                        aria-selected="false">
-                                        <i class="ni ni-settings-gear-65"></i>
-                                        <span class="ms-2">Settings</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -297,86 +265,123 @@ Profile Customer Page    </title>
         </div>
         <div class="container-fluid py-4">
             <div class="row">
-                <div class="col-md-8">
-                    <div class="card">
+                <div class="col-12">
+                    <div class="card mb-4">
                         <div class="card-header pb-0">
-                            <div class="d-flex align-items-center">
-                                <p class="mb-0">Edit Profile</p>
+                            <h6>Authors table</h6>
+                        </div>
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <form method="post" action="{{ url('Customer/SaveChanges') }}">
+                                    @csrf
+                                    <table class="table align-items-center mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th
+                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    Picture</th>
+                                                <th class="text-secondary opacity-7"></th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    Quantity</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    Price</th>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($data as $item)
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex px-2 py-1">
+                                                            <div>
+                                                                <img src="../../public/Product_Image/{{ $item->FoodPicture }}"
+                                                                    class="avatar avatar-sm me-3" alt="user2">
+                                                            </div>
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <input type="hidden" name="idfood[]"
+                                                                    value="{{ $item->FoodID }}">
+                                                                <h6 class="mb-0 text-sm">{{ $item->FoodName }}</h6>
+                                                                <p class="text-xs text-secondary mb-0">
+                                                                    {{ $item->KindsOfFoodName }}</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <select class="custom-select custom-select-lg mb-3"
+                                                            name="sizefood[]" id="size"
+                                                            style="font-family: Arial, sans-serif;
+                                                                       font-size: 16px;
+                                                                       font-weight: bold;
+                                                                       color: #0e0d0d;
+                                                                       background-color: #a7f384;
+                                                                       border-radius: 5px;
+                                                                       padding: 10px;
+                                                                       border: 0.5px solid #f81c1c;">
+                                                            <option selected
+                                                                style="font-family: Arial, sans-serif;
+                                                                                  font-size: 14px;
+                                                                                  font-weight: normal;
+                                                                                  color: #0e0d0d;
+                                                                                  background-color: #a7f384;">
+                                                                {{ $item->Size }}
+                                                            </option>
+                                                            <option value="S"
+                                                                style="font-family: Arial, sans-serif;
+                                                                                   font-size: 14px;
+                                                                                   font-weight: normal;
+                                                                                   color: #0e0d0d;
+                                                                                   background-color: #a7f384;">
+                                                                S</option>
+                                                            <option value="M"
+                                                                style="font-family: Arial, sans-serif;
+                                                                                   font-size: 14px;
+                                                                                   font-weight: normal;
+                                                                                   color: #0e0d0d;
+                                                                                   background-color: #a7f384;">
+                                                                M</option>
+                                                            <option value="L"
+                                                                style="font-family: Arial, sans-serif;
+                                                                                   font-size: 14px;
+                                                                                   font-weight: normal;
+                                                                                   color: #a7f384;
+                                                                                   background-color: #0e0d0d;">
+                                                                L</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <div class="input-group">
+                                                          <input id="number" type="number" class="form-control"
+                                                                 aria-label="Number" value="{{ $item->Quantity }}"
+                                                                 size="5"
+                                                                 style="width: 80px; height: 42.5px; border-radius: 10px; text-align: center;
+                                                                        font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 14px;
+                                                                        background-color: pink; color: #0e0d0d; border: 0.5px solid #f81c1c"
+                                                                 name="numberfood[]">
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle text-center text-sm">
+                                                        <h3>{{ $item->Price }} $</h3>
+                                                    </td>
+                                                    <td class="align-center">
+                                                    <td>
+                                                        <a href="{{ url('Customer/DeleteElementOrder/' . $item->FoodID) }}"
+                                                            class="btn btn-primary"
+                                                            onclick="return confirm('Are you sure about this?')">Delete</a>
+                                                    </td>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                    <div style="display: flex; justify-content: flex-end">
+                                        <button type="submit" class="btn btn-primary">Save
+                                            changes</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <form action="{{ url('updateProfile') }}" method="post">
-                            @csrf
-                            <div class="card-body">
-                                <p class="text-uppercase text-sm">User Information</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="example-text-input" class="form-control-label">Customer
-                                                ID</label>
-                                            <input class="form-control" type="text" name="id"
-                                                value="{{ $information->CustomerID }}" readonly>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            @error('fullname')
-                                                <p style="color: yellow; font-weight: bold;">
-                                                    <mark><em>{{ $message }}</em></mark>
-                                                </p>
-                                            @enderror
-                                            <label for="example-text-input" class="form-control-label">Full
-                                                name</label>
-                                            <input class="form-control" type="text" name="fullname"
-                                                value="{{ $information->CustomerFullName }}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="example-text-input" class="form-control-label">Gender</label>
-                                            <select id="gender" name="gender">
-                                                <option value="{{ $information->GenderCustomer }}">
-                                                    {{ $information->GenderCustomer }}
-                                                </option>
-                                                <option value="male" selected>Male</option>
-                                                <option value="female">Female</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="example-text-input" class="form-control-label">Date of
-                                                Birth</label>
-                                            <input class="form-control" type="date" name="date"
-                                                value="{{ $information->DateOfBirth }}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="example-text-input" class="form-control-label">Email</label>
-                                            <input class="form-control" type="email"
-                                                value="{{ $information->Email }}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="example-text-input" class="form-control-label">Address</label>
-                                            <input class="form-control" type="address"
-                                                value="{{ $information->Address }}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="example-text-input" class="form-control-label">Phone
-                                                number</label>
-                                            <input class="form-control" type="phone"
-                                                value="{{ $information->PhoneNumber }}">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="display: flex; justify-content: flex-end">
-                                    <button class="btn btn-primary btn-sm ms-auto" type="submit">Update</button>
-                                </div>
-                            </div>
                         </form>
                     </div>
                 </div>
@@ -520,13 +525,24 @@ Profile Customer Page    </title>
     <script src="{{ url('Admin/assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ url('Admin/assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
     <script>
-        var win = navigator.platform.indexOf('Win') > -1;
-        if (win && document.querySelector('#sidenav-scrollbar')) {
-            var options = {
-                damping: '0.5'
+        const numberInput = document.getElementById("number");
+        const increaseBtn = document.getElementById("increase");
+        const decreaseBtn = document.getElementById("decrease");
+
+        const increaseValue = () => {
+            let currentValue = parseInt(numberInput.value);
+            numberInput.value = currentValue + 1;
+        };
+
+        const decreaseValue = () => {
+            let currentValue = parseInt(numberInput.value);
+            if (currentValue > 1) {
+                numberInput.value = currentValue - 1;
             }
-            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-        }
+        };
+
+        increaseBtn.addEventListener("click", increaseValue);
+        decreaseBtn.addEventListener("click", decreaseValue);
     </script>
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
