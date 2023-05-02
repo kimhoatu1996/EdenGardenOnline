@@ -215,20 +215,20 @@
                                 <div class="row">
                                     <div class="col-4">
                                         <a href="#" class="thumb-menu">
-                                            <img class="img-fluid img-cover" src="img/hero-1.jpg" />
-                                            <h6>Australian Organic Beef</h6>
+                                            <img class="img-fluid img-cover" src="../Product_Image/MC005.jpg" />
+                                            <h6> Red tilapia with hong kong sauce</h6>
                                         </a>
                                     </div>
                                     <div class="col-4">
                                         <a href="#" class="thumb-menu">
-                                            <img class="img-fluid img-cover" src="img/hero-1.jpg" />
-                                            <h6>Australian Organic Beef</h6>
+                                            <img class="img-fluid img-cover" src="../Product_Image/MC006.jpg" />
+                                            <h6>Grilled meat skewers</h6>
                                         </a>
                                     </div>
                                     <div class="col-4">
                                         <a href="#" class="thumb-menu">
-                                            <img class="img-fluid img-cover" src="img/hero-1.jpg" />
-                                            <h6>Australian Organic Beef</h6>
+                                            <img class="img-fluid img-cover" src="../Product_Image/MC010.jpg" />
+                                            <h6>Crispy fried noodles</h6>
                                         </a>
                                     </div>
                                 </div>
@@ -255,64 +255,56 @@
                         <div class="col-lg-5 col-md-6 align-self-center py-5">
                             <h2 class="special-number">01.</h2>
                             <div class="dishes-text">
-                                <h3><span>Beef</span><br> Steak Sauce</h3>
-                                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate,
-                                    ea vero alias perferendis quas animi doloribus voluptates. Atque explicabo ea
-                                    nesciunt provident libero qui eum, corporis esse quos excepturi soluta?</p>
-                                <h3 class="special-dishes-price">$15.00</h3>
-                                <a href="#" class="btn-primary mt-3">book a table</a>
+                                <h3><span>Rice</span><br> Yang Chow Fried Rice</h3>
+                                <p class="pt-3">Yang Chow Fried Rice with diverse colors, each grain of golden rice is soaked with sweet and salty spices, fresh and natural vegetables mixed with sausages and sausages with a characteristic flavor, the more you eat, the more passionate you are.</p>
+                                <h3 class="special-dishes-price">$10.00</h3>
+                                <a href="#" class="btn-primary mt-3">buy</a>
                             </div>
                         </div>
                         <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                            <img src="img/steak.jpg" alt="" class="img-fluid shadow w-100">
+                            <img src="../../public/Product_Image/MC003.jpg" alt="" class="img-fluid shadow w-100">
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                            <img src="img/salmon-zucchini.jpg" alt="" class="img-fluid shadow w-100">
+                            <img src="../../public/Product_Image/MC008.jpg" alt="" class="img-fluid shadow w-100">
                         </div>
                         <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2 py-5">
                             <h2 class="special-number">02.</h2>
                             <div class="dishes-text">
-                                <h3><span>Salmon</span><br> Zucchini</h3>
-                                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis,
-                                    accusamus culpa quam amet ipsam odit ea doloremque accusantium quo, itaque possimus
-                                    eius. In a quis quibusdam omnis atque vero dolores!</p>
-                                <h3 class="special-dishes-price">$12.00</h3>
-                                <a href="#" class="btn-primary mt-3">book a table <span><i
+                                <h3><span>Noodle</span><br> Noodle with Duck</h3>
+                                <p class="pt-3">Chinese-style noodles should be both fragrant and smooth, bringing a bit of toughness to the dish. The fried duck here is crispy, while the tender duck is for those who want to enjoy the sweetness in every fiber of the meat</p>
+                                <h3 class="special-dishes-price">$25.00</h3>
+                                <a href="#" class="btn-primary mt-3">buy <span><i
                                             class="fa fa-long-arrow-right"></i></span></a>
                             </div>
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-lg-5 col-md-6 align-self-center py-5">
-                            <h2 class="special-number">01.</h2>
+                            <h2 class="special-number">03.</h2>
                             <div class="dishes-text">
-                                <h3><span>Beef</span><br> Steak Sauce</h3>
-                                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate,
-                                    ea vero alias perferendis quas animi doloribus voluptates. Atque explicabo ea
-                                    nesciunt provident libero qui eum, corporis esse quos excepturi soluta?</p>
-                                <h3 class="special-dishes-price">$15.00</h3>
-                                <a href="#" class="btn-primary mt-3">book a table</a>
+                                <h3><span>Dessert</span><br> Waffle </h3>
+                                <p class="pt-3">In terms of appearance, the Belgian Waffle impresses with its light and crispy texture and distinctive diagonal lines</p>
+                                <h3 class="special-dishes-price">$9.00</h3>
+                                <a href="#" class="btn-primary mt-3">buy</a>
                             </div>
                         </div>
                         <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                            <img src="img/steak.jpg" alt="" class="img-fluid shadow w-100">
+                            <img src="../../public/Product_Image/DS001.jpg" alt="" class="img-fluid shadow w-100">
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                            <img src="img/salmon-zucchini.jpg" alt="" class="img-fluid shadow w-100">
+                            <img src="../../public/Product_Image/CK02.jpg" alt="" class="img-fluid shadow w-100">
                         </div>
                         <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2 py-5">
-                            <h2 class="special-number">02.</h2>
+                            <h2 class="special-number">04.</h2>
                             <div class="dishes-text">
-                                <h3><span>Salmon</span><br> Zucchini</h3>
-                                <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis,
-                                    accusamus culpa quam amet ipsam odit ea doloremque accusantium quo, itaque possimus
-                                    eius. In a quis quibusdam omnis atque vero dolores!</p>
-                                <h3 class="special-dishes-price">$12.00</h3>
-                                <a href="#" class="btn-primary mt-3">book a table <span><i
+                                <h3><span>Cocktail</span><br> Margarita</h3>
+                                <p class="pt-3">Updating...</p>
+                                <h3 class="special-dishes-price">$45.00</h3>
+                                <a href="#" class="btn-primary mt-3">buy <span><i
                                             class="fa fa-long-arrow-right"></i></span></a>
                             </div>
                         </div>
@@ -332,7 +324,7 @@
                                     Specialties
                                 </span>
                                 <h2>
-                                    Our Menu
+                                    Best Seller
                                 </h2>
                             </div>
                         </div>
@@ -340,162 +332,161 @@
                     <div class="row">
                         <div class="col-lg-4 menu-wrap">
                             <div class="heading-menu">
-                                <h3 class="text-center mb-5">Breakfast</h3>
+                                <h3 class="text-center mb-5">Beverage</h3>
                             </div>
                             <div class="menus d-flex align-items-center">
                                 <div class="menu-img rounded-circle">
-                                    <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    <img class="img-fluid" src="../Product_Image/MT04.jpg" alt="">
                                 </div>
                                 <div class="text-wrap">
                                     <div class="row align-items-start">
                                         <div class="col-8">
-                                            <h4>Egg Sandwich</h4>
+                                            <h4>Black Sugar Pearl Milk Tea</h4>
                                         </div>
                                         <div class="col-4">
-                                            <h4 class="text-muted menu-price">$30</h4>
+                                            <h4 class="text-muted menu-price">$25</h4>
                                         </div>
                                     </div>
-                                    <p>Meat Ball, Mie</p>
+                                    <p>Milk Tea</p>
                                 </div>
                             </div>
                             <div class="menus d-flex align-items-center">
                                 <div class="menu-img rounded-circle">
-                                    <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    <img class="img-fluid" src="../Product_Image/T01.jpg" alt="">
                                 </div>
                                 <div class="text-wrap">
                                     <div class="row align-items-start">
                                         <div class="col-8">
-                                            <h4>Egg Sandwich</h4>
+                                            <h4>Strawberry Tea</h4>
                                         </div>
                                         <div class="col-4">
-                                            <h4 class="text-muted menu-price">$30</h4>
+                                            <h4 class="text-muted menu-price">$25</h4>
                                         </div>
                                     </div>
-                                    <p>Meat Ball, Mie</p>
+                                    <p>Tea</p>
                                 </div>
                             </div>
                             <div class="menus d-flex align-items-center">
                                 <div class="menu-img rounded-circle">
-                                    <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    <img class="img-fluid" src="../Product_Image/CK06.jpg" alt="">
                                 </div>
                                 <div class="text-wrap">
                                     <div class="row align-items-start">
                                         <div class="col-8">
-                                            <h4>Egg Sandwich</h4>
+                                            <h4>Negroni</h4>
                                         </div>
                                         <div class="col-4">
-                                            <h4 class="text-muted menu-price">$30</h4>
+                                            <h4 class="text-muted menu-price">$35</h4>
                                         </div>
                                     </div>
-                                    <p>Meat Ball, Mie</p>
+                                    <p>Cocktail</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 menu-wrap">
                             <div class="heading-menu">
-                                <h3 class="text-center mb-5">Breakfast</h3>
+                                <h3 class="text-center mb-5">Snack Food</h3>
                             </div>
                             <div class="menus d-flex align-items-center">
                                 <div class="menu-img rounded-circle">
-                                    <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    <img class="img-fluid" src="../Product_Image/SF07.jpg" alt="">
                                 </div>
                                 <div class="text-wrap">
                                     <div class="row align-items-start">
                                         <div class="col-8">
-                                            <h4>Egg Sandwich</h4>
+                                            <h4>Fried Yam</h4>
+                                        </div>
+                                        <div class="col-4">
+                                            <h4 class="text-muted menu-price">$20</h4>
+                                        </div>
+                                    </div>
+                                    <p>Yarms, flour </p>
+                                </div>
+                            </div>
+                            <div class="menus d-flex align-items-center">
+                                <div class="menu-img rounded-circle">
+                                    <img class="img-fluid" src="../Product_Image/SF12.jpg" alt="">
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="row align-items-start">
+                                        <div class="col-8">
+                                            <h4>Stir-fried Quail Eggs with Tamarind</h4>
+                                        </div>
+                                        <div class="col-4">
+                                            <h4 class="text-muted menu-price">$20</h4>
+                                        </div>
+                                    </div>
+                                    <p>Quail eggs, tamarind</p>
+                                </div>
+                            </div>
+                            <div class="menus d-flex align-items-center">
+                                <div class="menu-img rounded-circle">
+                                    <img class="img-fluid" src="../Product_Image/SF11.jpg" alt="">
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="row align-items-start">
+                                        <div class="col-8">
+                                            <h4>Rice Rolls</h4>
                                         </div>
                                         <div class="col-4">
                                             <h4 class="text-muted menu-price">$30</h4>
                                         </div>
                                     </div>
-                                    <p>Meat Ball, Mie</p>
-                                </div>
-                            </div>
-                            <div class="menus d-flex align-items-center">
-                                <div class="menu-img rounded-circle">
-                                    <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
-                                </div>
-                                <div class="text-wrap">
-                                    <div class="row align-items-start">
-                                        <div class="col-8">
-                                            <h4>Egg Sandwich</h4>
-                                        </div>
-                                        <div class="col-4">
-                                            <h4 class="text-muted menu-price">$30</h4>
-                                        </div>
-                                    </div>
-                                    <p>Meat Ball, Mie</p>
-                                </div>
-                            </div>
-                            <div class="menus d-flex align-items-center">
-                                <div class="menu-img rounded-circle">
-                                    <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
-                                </div>
-                                <div class="text-wrap">
-                                    <div class="row align-items-start">
-                                        <div class="col-8">
-                                            <h4>Egg Sandwich</h4>
-                                        </div>
-                                        <div class="col-4">
-                                            <h4 class="text-muted menu-price">$30</h4>
-                                        </div>
-                                    </div>
-                                    <p>Meat Ball, Mie</p>
+                                    <p>Seaweed, crab stick, carrot, egg</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 menu-wrap">
                             <div class="heading-menu">
-                                <h3 class="text-center mb-5">Breakfast</h3>
+                                <h3 class="text-center mb-5">Dessert</h3>
                             </div>
                             <div class="menus d-flex align-items-center">
                                 <div class="menu-img rounded-circle">
-                                    <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
+                                    <img class="img-fluid" src="../Product_Image/DS008.jpg" alt="">
                                 </div>
                                 <div class="text-wrap">
                                     <div class="row align-items-start">
                                         <div class="col-8">
-                                            <h4>Egg Sandwich</h4>
+                                            <h4>Fruit beams</h4>
+                                        </div>
+                                        <div class="col-4">
+                                            <h4 class="text-muted menu-price">$25</h4>
+                                        </div>
+                                    </div>
+                                    <p>Fruit Dessert</p>
+                                </div>
+                            </div>
+                            <div class="menus d-flex align-items-center">
+                                <div class="menu-img rounded-circle">
+                                    <img class="img-fluid" src="../Product_Image/DS009.jpg" alt="">
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="row align-items-start">
+                                        <div class="col-8">
+                                            <h4>Gelatin dessert</h4>
+                                        </div>
+                                        <div class="col-4">
+                                            <h4 class="text-muted menu-price">$25</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menus d-flex align-items-center">
+                                <div class="menu-img rounded-circle">
+                                    <img class="img-fluid" src="../Product_Image/DS010.jpg" alt="">
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="row align-items-start">
+                                        <div class="col-8">
+                                            <h4>Donut</h4>
                                         </div>
                                         <div class="col-4">
                                             <h4 class="text-muted menu-price">$30</h4>
                                         </div>
                                     </div>
-                                    <p>Meat Ball, Mie</p>
-                                </div>
-                            </div>
-                            <div class="menus d-flex align-items-center">
-                                <div class="menu-img rounded-circle">
-                                    <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
-                                </div>
-                                <div class="text-wrap">
-                                    <div class="row align-items-start">
-                                        <div class="col-8">
-                                            <h4>Egg Sandwich</h4>
-                                        </div>
-                                        <div class="col-4">
-                                            <h4 class="text-muted menu-price">$30</h4>
-                                        </div>
-                                    </div>
-                                    <p>Meat Ball, Mie</p>
-                                </div>
-                            </div>
-                            <div class="menus d-flex align-items-center">
-                                <div class="menu-img rounded-circle">
-                                    <img class="img-fluid" src="img/breakfast-1.jpg" alt="">
-                                </div>
-                                <div class="text-wrap">
-                                    <div class="row align-items-start">
-                                        <div class="col-8">
-                                            <h4>Egg Sandwich</h4>
-                                        </div>
-                                        <div class="col-4">
-                                            <h4 class="text-muted menu-price">$30</h4>
-                                        </div>
-                                    </div>
-                                    <p>Meat Ball, Mie</p>
+                                    <p>Cake</p>
                                 </div>
                             </div>
                         </div>
@@ -556,10 +547,10 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="team-card mb-5">
-                                <img class="img-fluid" src="img/chef-1.jpg" alt="">
+                                <img class="img-fluid" src="../Product_Image/TP.jpg" alt="">
                                 <div class="team-desc">
-                                    <h4 class="mb-0">Aaron Patel</h4>
-                                    <p class="mb-1">CEO</p>
+                                    <h4 class="mb-0">Nguyen Thien Phuc</h4>
+                                    <p class="mb-1">Restaurant manager</p>
                                     <ul class="list-inline mb-0 team-social-links">
                                         <li class="list-inline-item">
                                             <a href="#">
@@ -587,10 +578,10 @@
                         </div>
                         <div class="col-md-4">
                             <div class="team-card mb-5">
-                                <img class="img-fluid" src="img/chef-2.jpg" alt="">
+                                <img class="img-fluid" src="../Product_Image/MD.jpg" alt="">
                                 <div class="team-desc">
-                                    <h4 class="mb-0">Daniel Tebas</h4>
-                                    <p class="mb-1">Chef</p>
+                                    <h4 class="mb-0">Lai Minh Dinh</h4>
+                                    <p class="mb-1">Developer Programming</p>
                                     <ul class="list-inline mb-0 team-social-links">
                                         <li class="list-inline-item">
                                             <a href="#">
@@ -618,9 +609,9 @@
                         </div>
                         <div class="col-md-4">
                             <div class="team-card mb-5">
-                                <img class="img-fluid" src="img/chef-3.jpg" alt="">
+                                <img class="img-fluid" src="../Product_Image/MT.jpg" alt="">
                                 <div class="team-desc">
-                                    <h4 class="mb-0">Jon Snow</h4>
+                                    <h4 class="mb-0">Nguyen Minh Tan</h4>
                                     <p class="mb-1">Chef</p>
                                     <ul class="list-inline mb-0 team-social-links">
                                         <li class="list-inline-item">
