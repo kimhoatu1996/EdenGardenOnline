@@ -20,6 +20,7 @@ use App\Http\Controllers\CustomerController;
 
 Route::get('Homepage/homepage',[HomepageController::class,'index']);
 Route::get('Homepage/menu',[HomepageController::class,'menu']);
+Route::get('Homepage/kindoffood/{id}',[HomepageController::class,'kindoffood']);
 
 Route::get('Admin/admin',[AdminController::class,'admin'])->middleware('isLoggedIn');
 Route::get('Admin/pages/tables',[AdminController::class,'FoodProduct'])->middleware('isLoggedIn');
@@ -42,7 +43,6 @@ Route::post('saveEmployee',[AdminController::class,'saveEmployee'])->middleware(
 Route::get('Admin/pages/addemployee',[AdminController::class,'addEmployee'])->middleware('isLoggedIn');
 Route::get('deleteAccountcustomer/{id}', [AdminController::class,'deleteAccountcustomer']);
 Route::get('Admin/editcustomer/{id}',[AdminController::class,'editcustomer'])->middleware('isLoggedIn');
-
 
 
 Route::get('Customer/customer',[CustomerController::class,'customerindex'])->middleware('Customerchecklogin');

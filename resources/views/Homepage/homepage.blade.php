@@ -101,13 +101,9 @@
                                     Kind Of Food
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Main Course</a>
-                                    <a class="dropdown-item" href="#">Cake</a>
-                                    <a class="dropdown-item" href="#">Fast Food</a>
-                                    <a class="dropdown-item" href="#">Snacks</a>
-                                    <a class="dropdown-item" href="#">Saltine Crackers</a>
-                                    <a class="dropdown-item" href="#">Milktea and Tea</a>
-                                    <a class="dropdown-item" href="#">Cocktail</a>
+                                    @foreach ($kindsoffood as $name)
+                                        <a class="dropdown-item" href="{{ url('Homepage/kindoffood/' . $name->KindsOfFoodID) }}">{{ $name->KindsOfFoodName }}</a>
+                                    @endforeach
                                 </div>
                             </li>
                         </div>

@@ -291,6 +291,11 @@
                                         @csrf
                                         <div class="mb-3 mt-3" style="font-size: 50px">
                                             <label for="id">Employee ID:</label>
+                                            @error('id')
+                                            <p style="color: yellow; font-weight: bold;">
+                                                <mark><em>{{ $message }}</em></mark>
+                                            </p>
+                                        @enderror
                                             <input type="text" class="form-control" id="id"
                                                 name="id">
                                         </div>

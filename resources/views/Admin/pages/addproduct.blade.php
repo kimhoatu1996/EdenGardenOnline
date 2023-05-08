@@ -286,7 +286,7 @@
                                         @csrf
                                         <div class="mb-3 mt-3">
                                             <label for="id">Food ID:</label>
-                                            @error('address')
+                                            @error('id')
                                                 <p style="color: yellow; font-weight: bold;">
                                                     <mark><em>{{ $message }}</em></mark>
                                                 </p>

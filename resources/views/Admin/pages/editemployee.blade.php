@@ -18,21 +18,21 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{url('Admin/assets/img/apple-icon.png')}}">
-    <link rel="icon" type="image/png" href="{{url('Admin/assets/img/favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url('Admin/assets/img/apple-icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ url('Admin/assets/img/favicon.png') }}">
     <title>
         EDIT DETAILS
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Nucleo Icons -->
-    <link href="{{url('Admin/assets/css/nucleo-icons.css')}}" rel="stylesheet" />
-    <link href="{{url('Admin/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
+    <link href="{{ url('Admin/assets/css/nucleo-icons.css') }}" rel="stylesheet" />
+    <link href="{{ url('Admin/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="{{url('Admin/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
+    <link href="{{ url('Admin/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- CSS Files -->
-    <link id="pagestyle" href="{{url('Admin/assets/css/argon-dashboard.css?v=2.0.4')}}" rel="stylesheet" />
+    <link id="pagestyle" href="{{ url('Admin/assets/css/argon-dashboard.css?v=2.0.4') }}" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -52,7 +52,8 @@
                 aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
                 target="_blank">
-                <img src="{{url('Admin/assets/img/logo-ct-dark.png')}}" class="navbar-brand-img h-100" alt="main_logo">
+                <img src="{{ url('Admin/assets/img/logo-ct-dark.png') }}" class="navbar-brand-img h-100"
+                    alt="main_logo">
                 <span class="ms-1 font-weight-bold">EDIT</span>
             </a>
         </div>
@@ -192,7 +193,7 @@
                                     <a class="dropdown-item border-radius-md" href="javascript:;">
                                         <div class="d-flex py-1">
                                             <div class="my-auto">
-                                                <img src="{{url('Admin/assets/img/team-2.jpg')}}"
+                                                <img src="{{ url('Admin/assets/img/team-2.jpg') }}"
                                                     class="avatar avatar-sm  me-3 ">
                                             </div>
                                             <div class="d-flex flex-column justify-content-center">
@@ -211,7 +212,7 @@
                                     <a class="dropdown-item border-radius-md" href="javascript:;">
                                         <div class="d-flex py-1">
                                             <div class="my-auto">
-                                                <img src="{{url('Admin/assets/img/small-logos/logo-spotify.svg')}}"
+                                                <img src="{{ url('Admin/assets/img/small-logos/logo-spotify.svg') }}"
                                                     class="avatar avatar-sm bg-gradient-dark  me-3 ">
                                             </div>
                                             <div class="d-flex flex-column justify-content-center">
@@ -291,6 +292,11 @@
                                         @csrf
                                         <div class="mb-3 mt-3" style="font-size: 50px">
                                             <label for="id">Employee ID:</label>
+                                            @error('id')
+                                                <p style="color: yellow; font-weight: bold;">
+                                                    <mark><em>{{ $message }}</em></mark>
+                                                </p>
+                                            @enderror
                                             <input type="text" class="form-control" id="id" name="id"
                                                 value="{{ $employee->EmployeeID }}" readonly>
                                         </div>
@@ -364,16 +370,16 @@
                     </div>
                 </div>
             </div>
-           
-         
+
+
         </div>
     </main>
-    
+
     <!--   Core JS Files   -->
-    <script src="{{url('Admin/assets/js/core/popper.min.js')}}"></script>
-    <script src="{{url('Admin/assets/js/core/bootstrap.min.js')}}"></script>
-    <script src="{{url('Admin/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
-    <script src="{{url('Admin/assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
+    <script src="{{ url('Admin/assets/js/core/popper.min.js') }}"></script>
+    <script src="{{ url('Admin/assets/js/core/bootstrap.min.js') }}"></script>
+    <script src="{{ url('Admin/assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ url('Admin/assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
     <script>
         var win = navigator.platform.indexOf('Win') > -1;
         if (win && document.querySelector('#sidenav-scrollbar')) {
@@ -386,7 +392,7 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{url('Admin/assets/js/argon-dashboard.min.js?v=2.0.4')}}"></script>
+    <script src="{{ url('Admin/assets/js/argon-dashboard.min.js?v=2.0.4') }}"></script>
 </body>
 
 </html>
